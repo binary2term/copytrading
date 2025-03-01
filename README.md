@@ -1,2 +1,2 @@
 # copytrading
-Binance copy-trading api in erlang.
+Binance copy-trading api in Erlang.

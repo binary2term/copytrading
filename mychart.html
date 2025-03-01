@@ -1,0 +1,518 @@
+<html>
+  <head>
+    <title>It's a trading chart.</title>
+    <style type="text/css">
+      textarea {
+        width: 1270;
+        height: 40;
+        margin-top: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <select id="symbol" onchange="updateSymbol()">
+        <option value="BTCUSDT:1:3">BTCUSDT</option>
+        <option value="ETHUSDT:2:3">ETHUSDT</option>
+        <option value="SOLUSDT:2:0">SOLUSDT</option>
+        <option value="XRPUSDT:4:1">XRPSDT</option>
+        <option value="DOGEUSDT:5:0">DOGEUSDT</option>
+        <option value="1000PEPEUSDT:7:0">1000PEPEUSDT</option>
+        <option value="LINKUSDT:3:2">LINKUSDT</option>
+        <option value="SUIUSDT:4:1">SUIUSDT</option>
+        <option value="ENAUSDT:4:0">ENAUSDT</option>
+        <option value="ADAUSDT:4:0">ADAUSDT</option>
+        <option value="AAVEUSDT:2:1">AAVEUSDT</option>
+        <option value="FARTCOINUSDT:4:1">FARTCOINUSDT</option>
+        <option value="BNBUSDT:2:2">BNBUSDT</option>
+        <option value="WIFUSDT:4:1">WIFUSDT</option>
+        <option value="HBARUSDT:5:0">HBARUSDT</option>
+        <option value="LTCUSDT:2:3">LTCUSDT</option>
+        <option value="ONDOUSDT:4:1">ONDOUSDT</option>
+        <option value="1000BONKUSDT:6:0">1000BONKUSDT</option>
+        <option value="AVAXUSDT:3:0">AVAXUSDT</option>
+        <option value="TRXUSDT:5:0">TRXUSDT</option>
+        <option value="WLDUSDT:4:0">WLDUSDT</option>
+        <option value="XLMUSDT:5:0">XLMUSDT</option>
+        <option value="1000SHIBUSDT:6:0">1000SHIBUSDT</option>
+        <option value="DOTUSDT:3:1">DOTUSDT</option>
+        <option value="NEARUSDT:3:0">NEARUSDT</option>
+        <option value="JUPUSDT:4:0">JUPUSDT</option>
+        <option value="ALGOUSDT:4:1">ALGOUSDT</option>
+        <option value="NEIROUSDT:7:0">NEIROUSDT</option>
+        <option value="ORDIUSDT:3:1">ORDIUSDT</option>
+        <option value="AI16ZUSDT:4:1">AI16ZUSDT</option>
+        <option value="AIXBTUSDT:5:0">AIXBTUSDT</option>
+        <option value="FILUSDT:3:1">FILUSDT</option>
+        <option value="LDOUSDT:4:0">LDOUSDT</option>
+        <option value="SWARMSUSDT:4:0">SWARMSUSDT</option>
+        <option value="CRVUSDT:3:1">CRVUSDT</option>
+        <option value="TIAUSDT:4:0">TIAUSDT</option>
+        <option value="PENGUUSDT:6:0">PENGUUSDT</option>
+        <option value="ARBUSDT:4:1">ARBUSDT</option>
+        <option value="UNIUSDT:3:0">UNIUSDT</option>
+        <option value="VIRTUALUSDT:4:1">VIRTUALUSDT</option>
+        <option value="BCHUSDT:2:3">BCHUSDT</option>
+        <option value="SPXUSDT:4:0">SPXUSDT</option>
+        <option value="ENSUSDT:3:1">ENSUSDT</option>
+        <option value="ETCUSDT:3:2">ETCUSDT</option>
+        <option value="APTUSDT:4:1">APTUSDT</option>
+        <option value="POPCATUSDT:4:0">POPCATUSDT</option>
+        <option value="GALAUSDT:5:0">GALAUSDT</option>
+        <option value="OPUSDT:4:1">OPUSDT</option>
+        <option value="BOMEUSDT:6:0">BOMEUSDT</option>
+        <option value="FETUSDT:4:0">FETUSDT</option>
+        <option value="INJUSDT:3:1">INJUSDT</option>
+        <option value="GMTUSDT:5:0">GMTUSDT</option>
+        <option value="SANDUSDT:5:0">SANDUSDT</option>
+        <option value="RAYSOLUSDT:4:1">RAYSOLUSDT</option>
+        <option value="1000CHEEMSUSDT:7:0">1000CHEEMSUSDT</option>
+        <option value="GRIFFAINUSDT:5:0">GRIFFAINUSDT</option>
+        <option value="1000FLOKIUSDT:5:0">1000FLOKIUSDT</option>
+        <option value="SEIUSDT:4:0">SEIUSDT</option>
+        <option value="TURBOUSDT:7:0">TURBOUSDT</option>
+        <option value="EOSUSDT:3:1">EOSUSDT</option>
+        <option value="MOVEUSDT:4:0">MOVEUSDT</option>
+        <option value="1000SATSUSDT:7:0">1000SATSUSDT</option>
+        <option value="ATOMUSDT:3:2">ATOMUSDT</option>
+        <option value="DYDXUSDT:3:1">DYDXUSDT</option>
+        <option value="APEUSDT:4:0">APEUSDT</option>
+        <option value="TONUSDT:4:1">TONUSDT</option>
+        <option value="ZENUSDT:3:1">ZENUSDT</option>
+        <option value="RUNEUSDT:3:0">RUNEUSDT</option>
+        <option value="TRUMPUSDT:3:2">TRUMPUSDT</option>
+        <option value="ARCUSDT:5:0">ARCUSDT</option>
+        <option value="JTOUSDT:4:0">JTOUSDT</option>
+        <option value="DOGSUSDT:7:0">DOGSUSDT</option>
+        <option value="AVAAIUSDT:5:0">AVAAIUSDT</option>
+        <option value="VETUSDT:6:0">VETUSDT</option>
+        <option value="CHILLGUYUSDT:4:0">CHILLGUYUSDT</option>
+        <option value="ARKMUSDT:4:0">ARKMUSDT</option>
+        <option value="ZEREBROUSDT:4:0">ZEREBROUSDT</option>
+        <option value="STXUSDT:4:0">STXUSDT</option>
+        <option value="NOTUSDT:6:0">NOTUSDT</option>
+        <option value="SUSHIUSDT:4:0">SUSHIUSDT</option>
+        <option value="ICPUSDT:3:0">ICPUSDT</option>
+        <option value="MORPHOUSDT:4:1">MORPHOUSDT</option>
+        <option value="VANAUSDT:3:2">VANAUSDT</option>
+        <option value="JASMYUSDT:6:0">JASMYUSDT</option>
+        <option value="PENDLEUSDT:4:0">PENDLEUSDT</option>
+        <option value="CGPTUSDT:5:0">CGPTUSDT</option>
+        <option value="MEUSDT:3:1">MEUSDT</option>
+        <option value="ALCHUSDT:5:0">ALCHUSDT</option>
+        <option value="COOKIEUSDT:4:0">COOKIEUSDT</option>
+        <option value="SONICUSDT:4:1">SONICUSDT</option>
+        <option value="ZROUSDT:4:1">ZROUSDT</option>
+        <option value="1000RATSUSDT:5:0">1000RATSUSDT</option>
+        <option value="MEMEUSDT:6:0">MEMEUSDT</option>
+        <option value="AIUSDT:5:0">AIUSDT</option>
+        <option value="STRKUSDT:4:1">STRKUSDT</option>
+        <option value="AXSUSDT:3:0">AXSUSDT</option>
+        <option value="1000CATUSDT:5:0">1000CATUSDT</option>
+        <option value="GRTUSDT:5:0">GRTUSDT</option>
+        <option value="PYTHUSDT:5:0">PYTHUSDT</option>
+        <option value="MANAUSDT:4:0">MANAUSDT</option>
+        <option value="MKRUSDT:1:3">MKRUSDT</option>
+        <option value="COMPUSDT:2:3">COMPUSDT</option>
+        <option value="THETAUSDT:4:1">THETAUSDT</option>
+        <option value="XTZUSDT:3:1">XTZUSDT</option>
+        <option value="CHZUSDT:5:0">CHZUSDT</option>
+        <option value="ARUSDT:3:1">ARUSDT</option>
+        <option value="CFXUSDT:5:0">CFXUSDT</option>
+        <option value="MASKUSDT:4:0">MASKUSDT</option>
+        <option value="DEXEUSDT:3:2">DEXEUSDT</option>
+        <option value="XAIUSDT:5:0">XAIUSDT</option>
+        <option value="FLOWUSDT:3:1">FLOWUSDT</option>
+        <option value="STGUSDT:4:0">STGUSDT</option>
+        <option value="BBUSDT:5:0">BBUSDT</option>
+        <option value="NEOUSDT:3:2">NEOUSDT</option>
+        <option value="PHAUSDT:5:0">PHAUSDT</option>
+        <option value="ORCAUSDT:3:1">ORCAUSDT</option>
+        <option value="MANTAUSDT:4:1">MANTAUSDT</option>
+        <option value="ONTUSDT:4:1">ONTUSDT</option>
+        <option value="SXPUSDT:4:1">SXPUSDT</option>
+        <option value="1000LUNCUSDT:5:0">1000LUNCUSDT</option>
+        <option value="WUSDT:5:1">WUSDT</option>
+        <option value="HIVEUSDT:5:0">HIVEUSDT</option>
+        <option value="ZILUSDT:5:0">ZILUSDT</option>
+        <option value="BIGTIMEUSDT:5:0">BIGTIMEUSDT</option>
+        <option value="MEWUSDT:6:0">MEWUSDT</option>
+      </select>
+      <input type="radio" id="1m" name="period" onclick="updatePeriod('1m')"> 1m
+      <input type="radio" id="3m" name="period" onclick="updatePeriod('3m')"> 3m
+      <input type="radio" id="5m" name="period" checked onclick="updatePeriod('5m')"> 5m
+      <input type="radio" id="15m" name="period" onclick="updatePeriod('15m')"> 15m
+      <input type="radio" id="30m" name="period" onclick="updatePeriod('30m')"> 30m
+      <input type="radio" id="1h" name="period" onclick="updatePeriod('1h')"> 1h
+      <input type="radio" id="2h" name="period" onclick="updatePeriod('2h')"> 2h
+      <input type="radio" id="4h" name="period" onclick="updatePeriod('4h')"> 4h
+      <input type="radio" id="6h" name="period" onclick="updatePeriod('6h')"> 6h
+      <input type="radio" id="8h" name="period" onclick="updatePeriod('8h')"> 8h
+      <input type="radio" id="12h" name="period" onclick="updatePeriod('12h')"> 12h
+      <input type="radio" id="1d" name="period" onclick="updatePeriod('1d')"> 1d
+      <input type="radio" id="3d" name="period" onclick="updatePeriod('3d')"> 3d
+      <input type="radio" id="1w" name="period" onclick="updatePeriod('1w')"> 1w
+    </div>
+    <canvas id="myCanvas" width="1268" height="470" style="border:1px solid #a9a09bcb;"></canvas>
+    <textarea id="output" >hello</textarea>
+    <script>
+      let symbol = "BTCUSDT"
+      let period = "5m";
+      let symbolPricePoint = 1;
+      let symbolQuantityPoint = 3;
+      let maxPrice = 0;
+      let minPrice = 999999999;
+      let sl_value = 4;
+      let disPricePerPixel = 0;
+      let latestMaxPrice = 0;
+      let latestPrice = 0;
+      let scaleRatio = 0;
+      let switchEnable = true;
+      let stopEnable = false;
+      let stopPriceExist = false;
+      let stopPrice = 0;
+      let stopSell = false;
+      let options = document.getElementById("symbol").options;
+      let timerCnt = 0;
+      let symbolIdx = 0;
+      let rspArr;
+      let ctx;
+      function output(text) {
+        textarea = document.getElementById("output");
+        textarea.value += "\n" + text;
+        textarea.scrollTop = textarea.scrollHeight;
+      }
+      function updatePeriod(_period) {
+        period = _period;
+        updateChart();
+      }
+      function updateSymbol() {
+        let sel = document.getElementById("symbol");
+        let arr = sel.options[sel.selectedIndex].value.split(":");
+        symbol = arr[0];
+        symbolPricePoint = parseInt(arr[1]);
+        symbolQuantityPoint = parseInt(arr[2]);
+        for(let i = 0; i < options.length; ++i) {
+          let symbolmix = options[i].value;
+          let arr = symbolmix.split(":");
+          let _symbol = arr[0];
+          if(_symbol == symbol) {
+            symbolIdx = i;
+            break;
+          }
+        }
+        updateChart();
+      }
+      function getPeriod() {
+        if(document.getElementById("1m").checked) {
+          return "1m";
+        }
+        if(document.getElementById("3m").checked) {
+          return "3m";
+        }
+        if(document.getElementById("5m").checked) {
+          return "5m";
+        }
+        if(document.getElementById("15m").checked) {
+          return "15m";
+        }
+        if(document.getElementById("30m").checked) {
+          return "30m";
+        }
+        if(document.getElementById("1h").checked) {
+          return "1h";
+        }
+        if(document.getElementById("2h").checked) {
+          return "2h";
+        }
+        if(document.getElementById("4h").checked) {
+          return "4h";
+        }
+        if(document.getElementById("6h").checked) {
+          return "6h";
+        }
+        if(document.getElementById("8h").checked) {
+          return "8h";
+        }
+        if(document.getElementById("12h").checked) {
+          return "12h";
+        }
+        if(document.getElementById("1d").checked) {
+          return "1d";
+        }
+        if(document.getElementById("3d").checked) {
+          return "3d";
+        }
+        if(document.getElementById("1w").checked) {
+          return "1w";
+        }
+      }
+      function timerFunc() {
+        if(!switchEnable) {
+          setTimeout(timerFunc, 1000);
+          return;
+        }
+        if(++timerCnt <= 2) {
+          setTimeout(timerFunc, 1000);
+          return;
+        }
+        timerCnt = 1;
+        if(++symbolIdx >= options.length) {
+          symbolIdx = 0;
+        }
+        let symbolmix = options[symbolIdx].value;
+        let arr = symbolmix.split(":");
+        symbol = arr[0];
+        symbolPricePoint = parseInt(arr[1]);
+        symbolQuantityPoint = parseInt(arr[2]);
+        output([symbol, symbolPricePoint, symbolQuantityPoint, symbolIdx]);
+        period = getPeriod();
+        // output("getperiod: " + period);
+        document.getElementById("symbol").value = symbolmix;
+        updateChart();
+        setTimeout(timerFunc, 1000);
+      }
+      function mousedown(x, y) {
+        // output(["mousedown", x, y]);
+        if(x < 100) {
+          if(y < 120) {
+            switchEnable = !switchEnable;
+            output("switchEnable: " + switchEnable);
+          } else if(y > 350) {
+            stopEnable = !stopEnable;
+            output("stopEnable: " + stopEnable);
+          }
+          return;
+        }
+        let price = latestMaxPrice - y * disPricePerPixel;
+        if(!stopEnable) {
+          let sl = price.toFixed(symbolPricePoint);
+          let side = "SELL";
+          let quantity,tp;
+          if(price > latestPrice) {
+            tp = (latestPrice - (price - latestPrice)).toFixed(symbolPricePoint);
+            quantity = (sl_value / (price - latestPrice)).toFixed(symbolQuantityPoint);
+            output(symbol+" sell price: "+latestPrice+" "+quantity+" tp: "+tp+" sl: "+sl);
+          } else {
+            tp = (latestPrice + latestPrice - price).toFixed(symbolPricePoint);
+            quantity = (sl_value / (latestPrice - price)).toFixed(symbolQuantityPoint);
+            output(symbol+" buy price: "+latestPrice+" "+quantity+" tp: "+tp+" sl: "+sl);
+            side = "BUY";
+          }
+          var xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              output("xhr.rsp is "+xhr.response);
+            }
+          };
+          xhr.open('post', 'http://your-server-ip:8088/order1', true);
+          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+          xhr.send("symbol="+symbol+"&side="+side+"&sl="+sl+"&tp="+tp+"&quantity="+quantity);
+        } else {
+          if(!stopPriceExist) {
+            stopPrice = price;
+            stopPriceExist = true;
+            if(price < latestPrice) {
+              stopSell = true;
+            } else {
+              stopSell = false;
+            }
+            return;
+          }
+          let sl = price.toFixed(symbolPricePoint);
+          if(stopSell) {
+            let tp = (stopPrice - (price - stopPrice)).toFixed(symbolPricePoint);
+            let quantity = (sl_value / (price - stopPrice)).toFixed(symbolQuantityPoint);
+            output(symbol+" sellstop stopprice: "+stopPrice.toFixed(symbolPricePoint)+" "+quantity+" tp: "+tp+" sl: "+sl);
+          } else {
+            let tp = (stopPrice + stopPrice - price).toFixed(symbolPricePoint);
+            let quantity = (sl_value / (stopPrice - price)).toFixed(symbolQuantityPoint);
+            output(symbol+" buystop stopprice: "+stopPrice.toFixed(symbolPricePoint)+" "+quantity+" tp: "+tp+" sl: "+sl);
+          }
+          stopPriceExist = false;
+        }
+      }
+      function mousemove(x, y) {
+        redrawChart(2);
+        ctx.beginPath();
+        ctx.strokeStyle = "purple";
+        ctx.setLineDash([3,3]);
+        let price = latestMaxPrice - y * disPricePerPixel;
+        ctx.moveTo(0, y);
+        ctx.lineTo(1200, y);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.fillStyle = "purple";
+        ctx.textBaseline = "middle";
+        ctx.textAlign = "start";
+        ctx.fillText(price.toFixed(symbolPricePoint), 1205, y);
+      }
+      function redrawChart(type) {
+        if(type == 0) {
+          scaleRatio += 0.1;
+        } else if(type == 1) {
+          scaleRatio -= 0.1;
+        }
+        // output([scaleRatio, rspArr.length, maxPrice, minPrice]);
+        ctx.clearRect(0, 0, 1268, 470);
+        let disPrice = maxPrice - minPrice;
+        latestMaxPrice = maxPrice + disPrice * scaleRatio;
+        disPrice = disPrice + disPrice * scaleRatio * 2;
+        disPricePerPixel = disPrice / 470;
+        if(type < 2) {
+          // output([latestMaxPrice, disPrice, disPricePerPixel, scaleRatio]);
+        }
+        for(let i = 0; i < 10; ++i) {
+          ctx.beginPath();
+          ctx.strokeStyle = "#e1dedccb";
+          let price = latestMaxPrice - (i+1) * 42 * disPricePerPixel;
+          ctx.moveTo(0, (i+1) * 42);
+          ctx.lineTo(1200, (i+1) * 42);
+          ctx.stroke();
+          ctx.fillStyle = "black";
+          ctx.textBaseline = "middle";
+          ctx.textAlign = "start";
+          ctx.fillText(price.toFixed(symbolPricePoint), 1205, (i+1) * 42);
+        }
+        let latestDate = new Date(rspArr[199][0]);
+        ctx.textAlign = "center";
+        ctx.textBaseline = "hanging";
+        ctx.fillText(latestDate.toLocaleTimeString(), 1200, 450);
+        for(let i = 0; i < 200; ++i) {
+          let arr = rspArr[i];
+          let open = arr[1];
+          let high = arr[2];
+          let low = arr[3];
+          let close = arr[4];
+          let x = i * 6;
+          let y = 0;
+          let h = 0;
+          ctx.beginPath();
+          if(close > open) {
+            ctx.fillStyle = "green";
+            ctx.strokeStyle = "green";
+            y = parseInt((latestMaxPrice - close) / disPricePerPixel);
+            h = close - open;
+          } else {
+            ctx.fillStyle = "red";
+            ctx.strokeStyle = "red";
+            y = parseInt((latestMaxPrice - open) / disPricePerPixel);
+            h = open - close;
+          }
+          h = parseInt(h / disPricePerPixel);
+          ctx.fillRect(x, y, 4, h);
+          ctx.moveTo(x + 2, y);
+          ctx.lineTo(x + 2, parseInt((latestMaxPrice - high) / disPricePerPixel));
+          ctx.moveTo(x + 2, y + h);
+          ctx.lineTo(x + 2, parseInt((latestMaxPrice - low) / disPricePerPixel));
+          ctx.stroke();
+        }
+      }
+      function updateChart() {
+        minPrice = 999999999;
+        maxPrice = 0;
+        scaleRatio = 0;
+        stopEnable = false;
+        stopPriceExist = false;
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            rspArr = JSON.parse(xhr.response);
+            // output(rspArr.length);
+            rspArr.forEach(function(arr, idx) {
+              let high = parseFloat(arr[2]);
+              let low = parseFloat(arr[3]);
+              if(high > maxPrice) {
+                maxPrice = high;
+              }
+              if(low < minPrice) {
+                minPrice = low;
+              }
+            });
+            let disPrice = maxPrice - minPrice;
+            latestMaxPrice = maxPrice;
+            disPricePerPixel = disPrice / 470;
+            ctx.clearRect(0, 0, 1268, 470);
+            for(let i = 0; i < 10; ++i) {
+              ctx.beginPath();
+              ctx.strokeStyle = "#e1dedccb";
+              let price = maxPrice - (i+1) * 42 * disPricePerPixel;
+              ctx.moveTo(0, (i+1) * 42);
+              ctx.lineTo(1200, (i+1) * 42);
+              ctx.stroke();
+              ctx.fillStyle = "black";
+              ctx.textBaseline = "middle";
+              ctx.textAlign = "start";
+              ctx.fillText(price.toFixed(symbolPricePoint), 1205, (i+1) * 42);
+            }
+            let latestDate = new Date(rspArr[199][0]);
+            ctx.textAlign = "center";
+            ctx.textBaseline = "hanging";
+            ctx.fillText(latestDate.toLocaleTimeString(), 1200, 450);
+            for(let i = 0; i < 200; ++i) {
+              let arr = rspArr[i];
+              let open = parseFloat(arr[1]);
+              let high = parseFloat(arr[2]);
+              let low = parseFloat(arr[3]);
+              let close = parseFloat(arr[4]);
+              latestPrice = close;
+              let x = i * 6;
+              let y = 0;
+              let h = 0;
+              ctx.beginPath();
+              if(close > open) {
+                ctx.fillStyle = "green";
+                ctx.strokeStyle = "green";
+                y = parseInt((maxPrice - close) / disPricePerPixel);
+                h = close - open;
+              } else {
+                ctx.fillStyle = "red";
+                ctx.strokeStyle = "red";
+                y = parseInt((maxPrice - open) / disPricePerPixel);
+                h = open - close;
+              }
+              h = parseInt(h / disPricePerPixel);
+              ctx.fillRect(x, y, 4, h);
+              ctx.moveTo(x + 2, y);
+              ctx.lineTo(x + 2, parseInt((maxPrice - high) / disPricePerPixel));
+              ctx.moveTo(x + 2, y + h);
+              ctx.lineTo(x + 2, parseInt((maxPrice - low) / disPricePerPixel));
+              ctx.stroke();
+            }
+          }
+        }
+        xhr.open('post', 'http://your-server-ip:8088/chart', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        xhr.send("symbol="+symbol+"&period="+period);
+      }
+
+      let mousecnt = 0;
+      window.onload = function() {
+        output("onload..........");
+        const canvas = document.getElementById("myCanvas");
+        addEventListener("keydown", function(ev) {
+          if(ev.keyCode == 70) {
+            redrawChart(0);
+          } else if(ev.keyCode == 68) {
+            redrawChart(1);
+          }
+        });
+        canvas.addEventListener("mousedown", function(ev) {
+          let rect = canvas.getBoundingClientRect();
+          let x = ev.clientX - rect.left;
+          let y = ev.clientY - rect.top;
+          mousedown(x, y);
+        });
+        canvas.addEventListener("mousemove", function(ev) {
+          let rect = canvas.getBoundingClientRect();
+          let x = ev.clientX - rect.left;
+          let y = ev.clientY - rect.top;
+          mousemove(x, y);
+        });
+        ctx = canvas.getContext("2d");
+        updateChart();
+        timerFunc();
+      }
+      </script>
+  </body>
+</html>
