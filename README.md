@@ -51,3 +51,4 @@ xhr.open('post', 'http://your-server-ip:8088/chart', true);
 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 xhr.send("symbol="+symbol+"&period="+period);
 ```
+![img](./res/4.gif)
