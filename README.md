@@ -3,5 +3,8 @@ This repository provides an Erlang-based API for copy trading on Binance. It sup
 
 ## Switching
 When opening `mychart.html` in a browser, the price candlestick of the current currency will be displayed on the screen, and by default, it will switch to the next digital currency every 2 seconds:  
-
 ![img](./res/1.gif)
+
+## Periods
+You can freely switch between different periods to display K-lines of different time spans:  
+![img](./res/2.gif)
