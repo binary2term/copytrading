@@ -15,3 +15,10 @@ You can freely switch between different periods to display K-lines of different 
 You can press the 'F' key to zoom out the candlestick chart and the 'D' key to zoom in on the candlestick chart:  
 
 ![img](./res/3.gif)
+
+## Configuration
+Before starting the server, you must configure it. In the `src/ea1.erl` file, there are two fields corresponding to the secret key and api key you applied for on the binance exchange, as follows:
+```
+-define(SECRET_KEY, "your-binance-secretkey").
+-define(API_KEY, "your-binance-apikey").
+```
