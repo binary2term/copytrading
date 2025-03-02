@@ -17,8 +17,39 @@ You can press the 'F' key to zoom out the candlestick chart and the 'D' key to z
 ![img](./res/3.gif)
 
 ## Configuration
-Before starting the server, you must configure it. In the `src/ea1.erl` file, there are two fields corresponding to the secret key and api key you applied for on the binance exchange, as follows:
+Before starting the server, you must configure it. In the `src/ea1_api.erl` file, there are two fields corresponding to the secret key and api key you applied for on the binance exchange, as follows:
 ```
 -define(SECRET_KEY, "your-binance-secretkey").
 -define(API_KEY, "your-binance-apikey").
 ```
+In the file `src/ea1_app.erl`, you can configure the port for the HTTP service:
+```
+Dispath = cowboy_router:compile([
+{'_', [
+  {"/chart", ea1_handler, []},
+  {"/order1", ea1_handler, []},
+  {"/order2", ea1_handler, []}
+]}]),
+{ok, _} = cowboy:start_clear(mylistener,
+  [{port, 8088}],
+  #{env => #{dispatch => Dispath}}
+),
+```
+The client needs to configure the http server address it connects to.  
+In the `mousedown(x, y)` function, change the following address to your own server address:
+```
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function () {
+  if (xhr.readyState === 4) {
+    output("xhr.rsp is "+xhr.response);
+  }
+};
+xhr.open('post', 'http://your-server-ip:8088/order1', true);
+```
+In the `updateChart()` function, change the following address to your own server address:
+```
+xhr.open('post', 'http://your-server-ip:8088/chart', true);
+xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+xhr.send("symbol="+symbol+"&period="+period);
+```
+
