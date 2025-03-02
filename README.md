@@ -10,3 +10,8 @@ When opening `mychart.html` in a browser, the price candlestick of the current c
 You can freely switch between different periods to display K-lines of different time spans:  
 
 ![img](./res/2.gif)
+
+## Zoom
+You can press the 'F' key to zoom out the candlestick chart and the 'D' key to zoom in on the candlestick chart:  
+
+![img](./res/3.gif)
