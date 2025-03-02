@@ -35,8 +35,7 @@ Dispath = cowboy_router:compile([
   #{env => #{dispatch => Dispath}}
 ),
 ```
-The client needs to configure the http server address it connects to.  
-In the `mousedown(x, y)` function, change the following address to your own server address:
+In `mychart.html`, you need to change the address in function `mousedown(x, y)` to your own:
 ```
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function () {
@@ -46,10 +45,9 @@ xhr.onreadystatechange = function () {
 };
 xhr.open('post', 'http://your-server-ip:8088/order1', true);
 ```
-In the `updateChart()` function, change the following address to your own server address:
+And the same is true for function `updateChart()`:
 ```
 xhr.open('post', 'http://your-server-ip:8088/chart', true);
 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 xhr.send("symbol="+symbol+"&period="+period);
 ```
-
