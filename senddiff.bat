@@ -1,0 +1,1 @@
+git diff HEAD > diff.patch & erl -noshell -s fileclient main diff.patch -s init stop & echo complete.
