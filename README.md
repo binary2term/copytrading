@@ -4,12 +4,12 @@ This repository provides an Erlang-based API for copy trading on Binance. It sup
 ## Switching
 When opening `mychart.html` in a browser, the price candlestick of the current currency will be displayed on the screen, and by default, it will switch to the next digital currency every 2 seconds:  
 
-![img](https://github.com/binary2term/res/blob/main/1/1.gif)
+![img](https://github.com/binary2term/res/blob/main/1/1.gif?raw=true)
 
 ## Periods
 You can freely switch between different periods to display K-lines of different time spans:  
 
-![img](https://github.com/binary2term/res/blob/main/1/2.gif)
+![img](https://github.com/binary2term/res/blob/main/1/2.gif?raw=true)
 
 ## Zoom
 You can press the 'F' key to zoom out the candlestick chart and the 'D' key to zoom in on the candlestick chart:  
@@ -51,4 +51,4 @@ xhr.open('post', 'http://your-server-ip:8088/chart', true);
 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 xhr.send("symbol="+symbol+"&period="+period);
 ```
-![img](https://github.com/binary2term/res/blob/main/1/4.gif)
+![img](https://github.com/binary2term/res/blob/main/1/4.gif?raw=true)
